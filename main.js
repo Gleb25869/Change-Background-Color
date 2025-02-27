@@ -1,5 +1,5 @@
-const button = document.getElementById("btn");
-const colorspan = document.querySelector(".color");
+const button = document.getElementById("btn"); // --- Находим ID элемент в HTML и привязываем его к переменнойю.
+const colorspan = document.querySelector(".color"); // --- Находим CLASS элемент в HTML и привязываем его к переменной.
 
 const colors = [
   "#92e02ba",
@@ -42,14 +42,14 @@ const colors = [
   "#1aa1be",
   "#ce854a",
   "#73a9b9",
-];
+]; // --- Создаем "палитру" цветов.
 
 button.addEventListener("click", () => {
   let hexcolor = colors[random()];
   document.body.style.backgroundColor = hexcolor;
   colorspan.textContent = hexcolor;
-});
+}); // --- Вешаем "Слушатель" и лобовляем событие, создаем переменную, к которой хранится функция "random", в последствие, функция береет рандомный цвет из "палитра цветов".
 
 function random() {
   return Math.floor(Math.random() * colors.length);
-}
+} // --- Создаем функция "random", которая возвращает округленное число, найденное "Math.random() * colors.length".
